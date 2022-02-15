@@ -50,7 +50,7 @@ public class VariablesTheme {
         System.out.println("Максимальное значение byte: " + maxByteValue);
         System.out.println("Максимальное значение short: " + maxShortValue);
         System.out.println("Максимальное значение int: " + maxIntValue);
-        System.out.println("МаксИмальное значение long: " + maxLongValue);
+        System.out.println("Максимальное значение long: " + maxLongValue);
 
         System.out.println("Инкремент byte: " + ++maxByteValue);
         System.out.println("Инкремент short: " + ++maxShortValue);
@@ -110,18 +110,18 @@ public class VariablesTheme {
         //Вывод на консоль ASCII-арт Дюка
         System.out.println("Вывод на консоль ASCII-арт Дюка");
 
-        char signSlash = '/';
-        char signBackSlash = 92;
-        char signUnderscore = '_';
-        char signRoundBracket = '(';
-        char signBackRoundBracket = ')';
-        char signSpace = ' ';
+        char Slash = '/';
+        char BackSlash = 92;
+        char Underscore = '_';
+        char RoundBracket = '(';
+        char BackRoundBracket = ')';
+        char Space = ' ';
 
-        System.out.println("" + signSpace + signSpace + signSpace + signSpace + signSlash + signBackSlash + signSpace + signSpace + signSpace + signSpace + "");
-        System.out.println("" + signSpace + signSpace + signSpace + signSlash + signSpace + signSpace + signBackSlash+ "");
-        System.out.println("" + signSpace + signSpace + signSlash + signUnderscore + signRoundBracket + signSpace + signBackRoundBracket + signBackSlash + signSpace + signSpace + signSpace + "");
-        System.out.println("" + signSpace + signSlash + signSpace + signSpace + signSpace + signSpace + signSpace + signSpace + signBackSlash + "");
-        System.out.println("" + signSlash + signUnderscore + signUnderscore + signUnderscore + signUnderscore + signSlash + signBackSlash + signUnderscore + signUnderscore + signBackSlash + "");
+        System.out.println("" + Space + Space + Space + Space + Slash + BackSlash + Space + Space + Space + Space + "");
+        System.out.println("" + Space + Space + Space + Slash + Space + Space + BackSlash+ "");
+        System.out.println("" + Space + Space + Slash + Underscore + RoundBracket + Space + BackRoundBracket + BackSlash + Space + Space + Space + "");
+        System.out.println("" + Space + Slash + Space + Space + Space + Space + Space + Space + BackSlash + "");
+        System.out.println("" + Slash + Underscore + Underscore + Underscore + Underscore + Slash + BackSlash + Underscore + Underscore + BackSlash + "");
 
         //Отображение сотен, десятков, единиц числа
         System.out.println("Отображение сотен, десятков, единиц числа");
