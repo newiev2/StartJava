@@ -47,15 +47,15 @@ public class VariablesTheme {
         int maxIntValue = 2_147_483_647;
         long maxLongValue = 9_223_372_036_854_775_807L;
 
-        System.out.println("Максимальное значение byte: " + ++maxByteValue);
-        System.out.println("Максимальное значение short: " + ++maxShortValue);
-        System.out.println("Максимальное значение int: " + ++maxIntValue);
-        System.out.println("МаксИмальное значение long: " + ++maxLongValue);
+        System.out.println("Максимальное значение byte: " + maxByteValue);
+        System.out.println("Максимальное значение short: " + maxShortValue);
+        System.out.println("Максимальное значение int: " + maxIntValue);
+        System.out.println("МаксИмальное значение long: " + maxLongValue);
 
-        System.out.println("Инкремент byte: " + maxByteValue);
-        System.out.println("Инкремент short: " + maxShortValue);
-        System.out.println("Инкремент int: " + maxIntValue);
-        System.out.println("Инкремент long: " + maxLongValue);
+        System.out.println("Инкремент byte: " + ++maxByteValue);
+        System.out.println("Инкремент short: " + ++maxShortValue);
+        System.out.println("Инкремент int: " + ++maxIntValue);
+        System.out.println("Инкремент long: " + ++maxLongValue);
 
         System.out.println("Декремент byte: " + --maxByteValue);
         System.out.println("Декремент short: " + --maxShortValue);
@@ -104,9 +104,6 @@ public class VariablesTheme {
         int sumOfNum = firstNum + secondNum + thirdNum;
         int multiplicationOfNum = firstNum * secondNum * thirdNum;
 
-        System.out.println(firstNum);
-        System.out.println(secondNum);
-        System.out.println(thirdNum);
         System.out.println("Сумма цифр числа 345: " + sumOfNum);
         System.out.println("Произведение цифр числа 345: " + multiplicationOfNum);
 
