@@ -1,7 +1,6 @@
 public class VariablesTheme {
     public static void main(String[] args) {
         //Создание переменных и вывод их значений на консоль
-        
         System.out.println("Создание переменных и вывод их значений на консоль");
         byte cpuThreadsNumber = 4;
         short ram = 16;
@@ -24,10 +23,10 @@ public class VariablesTheme {
         //Расчет стоимости товара со скидкой
         System.out.println("Расчет стоимости товара со скидкой");
 
-        int priceForX = 100;
-        int priceForY = 200;
-        double discountAmount = (priceForX + priceForY) * 0.11;
-        double discountedTotalPrice = priceForX + priceForY - discountAmount;
+        int priceX = 100;
+        int priceY = 200;
+        double discountAmount = (priceX + priceY) * 0.11;
+        double discountedTotalPrice = priceX + priceY - discountAmount;
 
         System.out.println("Сумма скидки: " + discountAmount);
         System.out.println("Общая сумма X и Y с учетом скидки: " + discountedTotalPrice);
@@ -48,44 +47,34 @@ public class VariablesTheme {
         int maxIntValue = 2_147_483_647;
         long maxLongValue = 9_223_372_036_854_775_807L;
 
-        System.out.println("Максимальное значение byte: " + maxByteValue);
-        System.out.println("Максимальное значение short: " + maxShortValue);
-        System.out.println("Максимальное значение int: " + maxIntValue);
-        System.out.println("Максимальное значение long: " + maxLongValue);
+        System.out.println("Максимальное значение byte: " + ++maxByteValue);
+        System.out.println("Максимальное значение short: " + ++maxShortValue);
+        System.out.println("Максимальное значение int: " + ++maxIntValue);
+        System.out.println("МаксИмальное значение long: " + ++maxLongValue);
 
-        maxByteValue++;
-        maxShortValue++;
-        maxIntValue++;
-        maxLongValue++;
+        System.out.println("Инкремент byte: " + maxByteValue);
+        System.out.println("Инкремент short: " + maxShortValue);
+        System.out.println("Инкремент int: " + maxIntValue);
+        System.out.println("Инкремент long: " + maxLongValue);
 
-        System.out.println("Iнкремент byte: " + maxByteValue);
-        System.out.println("Iнкремент short: " + maxShortValue);
-        System.out.println("Iнкремент int: " + maxIntValue);
-        System.out.println("Iнкремент long: " + maxLongValue);
-
-        maxByteValue--;
-        maxShortValue--;
-        maxIntValue--;
-        maxLongValue--;
-
-        System.out.println("Декремент byte: " + maxByteValue);
-        System.out.println("Декремент short: " + maxShortValue);
-        System.out.println("Декремент int: " + maxIntValue);
-        System.out.println("Декремент long: " + maxLongValue);
+        System.out.println("Декремент byte: " + --maxByteValue);
+        System.out.println("Декремент short: " + --maxShortValue);
+        System.out.println("Декремент int: " + --maxIntValue);
+        System.out.println("Декремент long: " + --maxLongValue);
         
         //Перестановка значений переменных
         System.out.println("Перестановка значений переменных");
 
         double num1 = 3.25;
         double num2 = 6.75;
-        double switcher;
+        double tempNum;
 
         System.out.println("Значение переменной num1: " + num1);
         System.out.println("Значение переменной num2: " + num2);
 
-        switcher = num1;
+        tempNum = num1;
         num1 = num2;
-        num2 = switcher;
+        num2 = tempNum;
 
         System.out.println("Значение переменной num1 теперь: " + num1);
         System.out.println("Значение переменной num2 теперь: " + num2);
@@ -99,36 +88,43 @@ public class VariablesTheme {
         int int4 = 94;
         int int5 = 95;
 
-        System.out.println(int1 + " " + (char)int1);
-        System.out.println(int2 + " " + (char)int2);
-        System.out.println(int3 + " " + (char)int3);
-        System.out.println(int4 + " " + (char)int4);
-        System.out.println(int5 + " " + (char)int5);
+        System.out.println(int1 + " " + (char) int1);
+        System.out.println(int2 + " " + (char) int2);
+        System.out.println(int3 + " " + (char) int3);
+        System.out.println(int4 + " " + (char) int4);
+        System.out.println(int5 + " " + (char) int5);
 
         //Произведение и сумма цифр числа
         System.out.println("Произведение и сумма цифр числа");
 
-        int someNum = 345;
-        int sumOfNum = 3 + 4 + 5;
-        int multiplicationOfNum = 3 * 4 * 5;
+        int srcNum = 345;
+        int firstNum = srcNum / 100;
+        int secondNum = srcNum % 100 / 10;
+        int thirdNum = srcNum % 10;
+        int sumOfNum = firstNum + secondNum + thirdNum;
+        int multiplicationOfNum = firstNum * secondNum * thirdNum;
 
+        System.out.println(firstNum);
+        System.out.println(secondNum);
+        System.out.println(thirdNum);
         System.out.println("Сумма цифр числа 345: " + sumOfNum);
         System.out.println("Произведение цифр числа 345: " + multiplicationOfNum);
 
         //Вывод на консоль ASCII-арт Дюка
         System.out.println("Вывод на консоль ASCII-арт Дюка");
 
-        char sign1 = '/';
-        char sign2 = 92;
-        char sign3 = '_';
-        char sign4 = '(';
-        char sign5 = ')';
+        char signSlash = '/';
+        char signBackSlash = 92;
+        char signUnderscore = '_';
+        char signRoundBracket = '(';
+        char signBackRoundBracket = ')';
+        char signSpace = ' ';
 
-        System.out.println("    " + sign1 + sign2 + "    ");
-        System.out.println("   " + sign1 + "  " + sign2 + "   ");
-        System.out.println("  " + sign1 + sign3 + sign4 + sign5 + " " + sign2 + "  ");
-        System.out.println(" " + sign1 + "      " + sign2 + " ");
-        System.out.println("" + sign1 + sign3 + sign3 + sign3 + sign3 + sign1 + sign2 + sign3 + sign3 + sign2);
+        System.out.println("" + signSpace + signSpace + signSpace + signSpace + signSlash + signBackSlash + signSpace + signSpace + signSpace + signSpace + "");
+        System.out.println("" + signSpace + signSpace + signSpace + signSlash + signSpace + signSpace + signBackSlash+ "");
+        System.out.println("" + signSpace + signSpace + signSlash + signUnderscore + signRoundBracket + signSpace + signBackRoundBracket + signBackSlash + signSpace + signSpace + signSpace + "");
+        System.out.println("" + signSpace + signSlash + signSpace + signSpace + signSpace + signSpace + signSpace + signSpace + signBackSlash + "");
+        System.out.println("" + signSlash + signUnderscore + signUnderscore + signUnderscore + signUnderscore + signSlash + signBackSlash + signUnderscore + signUnderscore + signBackSlash + "");
 
         //Отображение сотен, десятков, единиц числа
         System.out.println("Отображение сотен, десятков, единиц числа");
@@ -152,5 +148,8 @@ public class VariablesTheme {
 
         System.out.println("Всего секунд: " + totalSeconds);
         System.out.println("Время в формате ЧЧ:ММ:СС: " + hours + ":" + minutes + ":" + seconds);
+
+        int a = 345;
+
     }
 }
