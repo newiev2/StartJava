@@ -112,18 +112,17 @@ public class IfElseStatementTheme {
             interest = 5;
             System.out.println("Начисленный процент равен " + interest + "%");
             totalAmount = depositAmount - depositAmount * interest / 100;
-            System.out.println("Итоговая сумма вместе с начисленными процентами равна " + totalAmount);
         } else if(depositAmount >= 100_000 & depositAmount <= 300_000) {
             interest = 7;
             System.out.println("Начисленный процент равен " + interest + "%");
             totalAmount = depositAmount - depositAmount * interest / 100;
-            System.out.println("Итоговая сумма вместе с начисленными процентами равна " + totalAmount);
         } else if(depositAmount > 300_000) {
             interest = 10;
             System.out.println("Начисленный процент равен " + interest + "%");
             totalAmount = depositAmount - depositAmount * interest / 100;
-            System.out.println("Итоговая сумма вместе с начисленными процентами равна " + totalAmount);
             }
+
+            System.out.println("Итоговая сумма вместе с начисленными процентами равна " + totalAmount);
 
             //Определение оценки по предметам
             System.out.println("Определение оценки по предметам");
