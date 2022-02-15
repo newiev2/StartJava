@@ -148,8 +148,5 @@ public class VariablesTheme {
 
         System.out.println("Всего секунд: " + totalSeconds);
         System.out.println("Время в формате ЧЧ:ММ:СС: " + hours + ":" + minutes + ":" + seconds);
-
-        int a = 345;
-
     }
 }
