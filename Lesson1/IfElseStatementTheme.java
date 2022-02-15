@@ -103,7 +103,7 @@ public class IfElseStatementTheme {
         System.out.println("Определение суммы вклада и начисленных банком %");
 
         int depositAmount = 300_000;
-        int interest;
+        int interest = 0;
         int totalAmount;
 
         System.out.println("Сумма вклада равна " + depositAmount);
@@ -111,107 +111,105 @@ public class IfElseStatementTheme {
         if(depositAmount < 100_000) {
             interest = 5;
             System.out.println("Начисленный процент равен " + interest + "%");
-            totalAmount = depositAmount - depositAmount * interest / 100;
         } else if(depositAmount >= 100_000 & depositAmount <= 300_000) {
             interest = 7;
             System.out.println("Начисленный процент равен " + interest + "%");
-            totalAmount = depositAmount - depositAmount * interest / 100;
         } else if(depositAmount > 300_000) {
             interest = 10;
             System.out.println("Начисленный процент равен " + interest + "%");
-            totalAmount = depositAmount - depositAmount * interest / 100;
-            }
+        }
 
-            System.out.println("Итоговая сумма вместе с начисленными процентами равна " + totalAmount);
+        totalAmount = depositAmount - depositAmount * interest / 100;
+        System.out.println("Итоговая сумма вместе с начисленными процентами равна " + totalAmount);
 
-            //Определение оценки по предметам
-            System.out.println("Определение оценки по предметам");
+        //Определение оценки по предметам
+        System.out.println("Определение оценки по предметам");
 
-            int scorePercentHistory = 59;
-            int scorePercentProgramming = 91;
-            double scorePercentAverage = (scorePercentHistory + scorePercentProgramming) / 2;
-            int scoreNumberHistory;
-            int scoreNumberProgramming;
-            double scoreNumberAverage;
+        int scorePercentHistory = 59;
+        int scorePercentProgramming = 91;
+        double scorePercentAverage = (scorePercentHistory + scorePercentProgramming) / 2;
+        int scoreNumberHistory;
+        int scoreNumberProgramming;
+        double scoreNumberAverage;
 
-            if(scorePercentHistory <= 60) {
-                scoreNumberHistory = 2;
-            } else if(scorePercentHistory > 60 & scorePercentHistory <= 73) {
-                scoreNumberHistory = 3;
-            } else if(scorePercentHistory > 73 & scorePercentHistory <= 91) {
-                scoreNumberHistory = 4;
-            } else {
-                scoreNumberHistory = 5;
-            }
+        if(scorePercentHistory <= 60) {
+            scoreNumberHistory = 2;
+        } else if(scorePercentHistory > 60 & scorePercentHistory <= 73) {
+            scoreNumberHistory = 3;
+        } else if(scorePercentHistory > 73 & scorePercentHistory <= 91) {
+            scoreNumberHistory = 4;
+        } else {
+            scoreNumberHistory = 5;
+        }
 
-            if(scorePercentProgramming <= 60) {
-                scoreNumberProgramming = 2;
-            } else if(scorePercentProgramming > 60 & scorePercentProgramming <= 73) {
-                scoreNumberProgramming = 3;
-            } else if(scorePercentProgramming > 73 & scorePercentProgramming <= 91) {
-                scoreNumberProgramming = 4;
-            } else {
-                scoreNumberProgramming = 5;
-            }
+        if(scorePercentProgramming <= 60) {
+            scoreNumberProgramming = 2;
+        } else if(scorePercentProgramming > 60 & scorePercentProgramming <= 73) {
+            scoreNumberProgramming = 3;
+        } else if(scorePercentProgramming > 73 & scorePercentProgramming <= 91) {
+            scoreNumberProgramming = 4;
+        } else {
+            scoreNumberProgramming = 5;
+        }
 
-            System.out.println("История " + scoreNumberHistory);
-            System.out.println("Программирование "+ scoreNumberProgramming);
-            scoreNumberAverage = (scoreNumberHistory + scoreNumberProgramming) / 2;
-            System.out.println("Средний балл оценок по предметам " + scoreNumberAverage);
-            System.out.println("Средний % по предметам " + scorePercentAverage);
+        System.out.println("История " + scoreNumberHistory);
+        System.out.println("Программирование "+ scoreNumberProgramming);
+        scoreNumberAverage = (scoreNumberHistory + scoreNumberProgramming) / 2;
+        System.out.println("Средний балл оценок по предметам " + scoreNumberAverage);
+        System.out.println("Средний % по предметам " + scorePercentAverage);
 
-            //Расчет прибыли (убытка)
-            System.out.println("Расчет прибыли (убытка)");
+        //Расчет прибыли (убытка)
+        System.out.println("Расчет прибыли (убытка)");
 
-            int rentAmount = 5000;
-            int incomeAmount = 15000;
-            int costPrice = 9000;
-            int yearlyNetProfit = (incomeAmount - costPrice - rentAmount) * 12;
+        int rentAmount = 5000;
+        int incomeAmount = 15000;
+        int costPrice = 9000;
+        int yearlyNetProfit = (incomeAmount - costPrice - rentAmount) * 12;
 
-            if(yearlyNetProfit < 0) {
-                System.out.println("Годовой убыток составил -" + yearlyNetProfit);
-            } else {
-                System.out.println("Годовая прибыль составила +" + yearlyNetProfit);
-            }
+        if(yearlyNetProfit < 0) {
+            System.out.println("Годовой убыток составил -" + yearlyNetProfit);
+        } else {
+            System.out.println("Годовая прибыль составила +" + yearlyNetProfit);
+        }
 
-            //Определение существования треугольника
-            System.out.println("Определение существования треугольника");
+        //Определение существования треугольника
+        System.out.println("Определение существования треугольника");
 
-            int sideX = 5;
-            int sideY = 5;
-            int sideZ = 7;
-            int cornerDegree = 90;
+        int sideX = 5;
+        int sideY = 5;
+        int sideZ = 7;
+        int cornerDegree = 90;
 
-            if((sideX == sideY || sideX == sideZ || sideY == sideZ) & cornerDegree == 90) {
-                System.out.println("Такого треугольника не существует. Ни один из углов равнобедренного треугольника не может быть равен 90 градусов");
-                System.out.println("Действительную площадь такого треугольника посчитать невозможно, т.к. его не существует");
-            }
+        if((sideX == sideY || sideX == sideZ || sideY == sideZ) & cornerDegree == 90) {
+            System.out.println("Такого треугольника не существует. Ни один из углов равнобедренного треугольника не может быть равен 90 градусов");
+            System.out.println("Действительную площадь такого треугольника посчитать невозможно, т.к. его не существует");
+        }
 
-            System.out.println("|\'");
-            System.out.println("| \'");
-            System.out.println("|  \'");
-            System.out.println("|   \'");
-            System.out.println("|    \'");
-            System.out.println("|");
-            System.out.println("|_____");
+        System.out.println("|\'");
+        System.out.println("| \'");
+        System.out.println("|  \'");
+        System.out.println("|   \'");
+        System.out.println("|    \'");
+        System.out.println("|");
+        System.out.println("|_____");
 
-            //Подсчет количества банкнот
-            System.out.println("Подсчет количества банкнот");
+        //Подсчет количества банкнот
+        System.out.println("Подсчет количества банкнот");
 
-            int totalSum = 567;
-            int countNom50;
-            int countNom10;
-            int countNom1;
-            int reverseCalsulation;
+        int totalSum = 567;
+        int countNom50;
+        int countNom10;
+        int countNom1;
+        int reverseCalsulation;
 
-            countNom50 = totalSum / 50;
-            countNom10 = totalSum % 50 / 10;
-            countNom1 = totalSum % 10;
-            reverseCalsulation = countNom50 * 50 + countNom10 * 10 + countNom1 * 1;
+        countNom50 = totalSum / 50;
+        countNom10 = totalSum % 50 / 10;
+        countNom1 = totalSum % 10;
+        reverseCalsulation = countNom50 * 50 + countNom10 * 10 + countNom1 * 1;
 
-            System.out.println("Исходная сумма равна " + totalSum);
-            System.out.println("Количество банкнот номиналом 50 = " + countNom50);
-            System.out.println("Количество банкнот номиналом 10 = " + countNom10);
-            System.out.println("Количество банкнот номиналом 1 = " + countNom1);
+        System.out.println("Исходная сумма равна " + totalSum);
+        System.out.println("Количество банкнот номиналом 50 = " + countNom50);
+        System.out.println("Количество банкнот номиналом 10 = " + countNom10);
+        System.out.println("Количество банкнот номиналом 1 = " + countNom1);
     }
 }
