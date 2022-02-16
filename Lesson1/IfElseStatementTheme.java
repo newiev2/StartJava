@@ -189,7 +189,7 @@ public class IfElseStatementTheme {
                 square = (tempValue + (squareRoot / tempValue)) / 2;
             } while ((tempValue - square) != 0);
             System.out.println("Площадь данного треугольника = " + square);
-            System.out.println("Проверяем, что вычисления верны. square * square = " +(square * square));
+            System.out.println("Проверяем, что вычисления верны. square * square = " + (square * square));
         } else {
             System.out.println("Такой треугольник не существует");
         }
@@ -206,9 +206,9 @@ public class IfElseStatementTheme {
         countNom50 = totalSum / 50;
         countNom10 = totalSum % 50 / 10;
         countNom1 = totalSum % 10;
-        reverseCalsulation = countNom50 * 50 + countNom10 * 10 + countNom1 * 1;
+        reverseCalculation = countNom50 * 50 + countNom10 * 10 + countNom1 * 1;
 
-        System.out.println("Исходная сумма равна " + totalSum);
+        System.out.println("Исходная сумма равна " + reverseCalculation;
         System.out.println("Количество банкнот номиналом 50 = " + countNom50);
         System.out.println("Количество банкнот номиналом 10 = " + countNom10);
         System.out.println("Количество банкнот номиналом 1 = " + countNom1);
