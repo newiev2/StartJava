@@ -56,14 +56,10 @@ public class IfElseStatementTheme {
 
         if(srcNum < 0) {
             System.out.println("Число " + srcNum + " является отрицательным");
-        } else {
+        } else if(srcNum > 0) {
             System.out.println("Число " + srcNum + " является положительным");
-        }
-
-        if(srcNum == 0) {
+        } else if(srcNum == 0) {
             System.out.println("Число " + srcNum + " является нулем");
-        } else {
-            System.out.println("Число " + srcNum + " не является нулем");
         }
 
         //Поиск общей цифры в числах
@@ -91,7 +87,7 @@ public class IfElseStatementTheme {
 
         char srcSign = '\u005A';
 
-        if(srcSign >= 'A' && srcSign <= 'Z' | srcSign >= 'a' && srcSign <= 'z') {
+        if((srcSign >= 'A' && srcSign <= 'Z') || (srcSign >= 'a' && srcSign <= 'z') || (srcSign >= 'А' && srcSign <= 'Я') || (srcSign >= 'а' && srcSign <= 'я')) {
             System.out.println("Символ " + srcSign + " является буквой");
         } else if(srcSign >= '0' && srcSign <= '9') {
             System.out.println("Символ " + srcSign + " является цифрой");
@@ -109,14 +105,11 @@ public class IfElseStatementTheme {
         System.out.println("Сумма вклада равна " + depositAmount);
 
         if(depositAmount < 100_000) {
-            interest = 5;
-            System.out.println("Начисленный процент равен " + interest + "%");
+            System.out.println("Начисленный процент равен " + (interest = 5) + "%");
         } else if(depositAmount >= 100_000 & depositAmount <= 300_000) {
-            interest = 7;
-            System.out.println("Начисленный процент равен " + interest + "%");
+            System.out.println("Начисленный процент равен " + (interest = 7) + "%");
         } else if(depositAmount > 300_000) {
-            interest = 10;
-            System.out.println("Начисленный процент равен " + interest + "%");
+            System.out.println("Начисленный процент равен " + (interest = 10) + "%");
         }
 
         totalAmount = depositAmount - depositAmount * interest / 100;
@@ -175,23 +168,31 @@ public class IfElseStatementTheme {
         //Определение существования треугольника
         System.out.println("Определение существования треугольника");
 
-        int sideX = 5;
-        int sideY = 5;
-        int sideZ = 7;
+        double sideX = 5;
+        double sideY = 5;
+        double sideZ = 7;
         int cornerDegree = 90;
 
-        if((sideX == sideY || sideX == sideZ || sideY == sideZ) & cornerDegree == 90) {
-            System.out.println("Такого треугольника не существует. Ни один из углов равнобедренного треугольника не может быть равен 90 градусов");
-            System.out.println("Действительную площадь такого треугольника посчитать невозможно, т.к. его не существует");
-        }
+        if((sideX + sideY > sideZ) || (sideX + sideZ > sideY) || (sideY + sideZ > sideX)) {
+            System.out.println("Такой треугольник существует");
 
-        System.out.println("|\'");
-        System.out.println("| \'");
-        System.out.println("|  \'");
-        System.out.println("|   \'");
-        System.out.println("|    \'");
-        System.out.println("|");
-        System.out.println("|_____");
+            double halfPerimeter = (sideX + sideY + sideZ) / 2;
+            double squareRoot = halfPerimeter * (halfPerimeter - sideX) * (halfPerimeter - sideY) * (halfPerimeter - sideZ);
+
+            System.out.println("Квадратный корень данного треугольника равен " + squareRoot);
+
+            double square = squareRoot / 2;
+            double tempValue;
+
+            do {
+                tempValue = square;
+                square = (tempValue + (squareRoot / tempValue)) / 2;
+            } while ((tempValue - square) != 0);
+            System.out.println("Площадь данного треугольника = " + square);
+            System.out.println("Проверяем, что вычисления верны. square * square = " +(square * square));
+        } else {
+            System.out.println("Такой треугольник не существует");
+        }
 
         //Подсчет количества банкнот
         System.out.println("Подсчет количества банкнот");

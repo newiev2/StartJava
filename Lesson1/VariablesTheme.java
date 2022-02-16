@@ -110,18 +110,18 @@ public class VariablesTheme {
         //Вывод на консоль ASCII-арт Дюка
         System.out.println("Вывод на консоль ASCII-арт Дюка");
 
-        char Slash = '/';
-        char BackSlash = 92;
-        char Underscore = '_';
-        char RoundBracket = '(';
-        char BackRoundBracket = ')';
-        char Space = ' ';
+        char slash = '/';
+        char backSlash = 92;
+        char underScore = '_';
+        char roundBracket = '(';
+        char backRoundBracket = ')';
+        char space = ' ';
 
-        System.out.println("" + Space + Space + Space + Space + Slash + BackSlash + Space + Space + Space + Space + "");
-        System.out.println("" + Space + Space + Space + Slash + Space + Space + BackSlash+ "");
-        System.out.println("" + Space + Space + Slash + Underscore + RoundBracket + Space + BackRoundBracket + BackSlash + Space + Space + Space + "");
-        System.out.println("" + Space + Slash + Space + Space + Space + Space + Space + Space + BackSlash + "");
-        System.out.println("" + Slash + Underscore + Underscore + Underscore + Underscore + Slash + BackSlash + Underscore + Underscore + BackSlash + "");
+        System.out.println("" + space + space + space + space + slash + backSlash + space + space + space + space + "");
+        System.out.println("" + space + space + space + slash + space + space + backSlash+ "");
+        System.out.println("" + space + space + slash + underScore + roundBracket + space + backRoundBracket + backSlash + space + space + space + "");
+        System.out.println("" + space + slash + space + space + space + space + space + space + backSlash + "");
+        System.out.println("" + slash + underScore + underScore + underScore + underScore + slash + backSlash + underScore + underScore + backSlash + "");
 
         //Отображение сотен, десятков, единиц числа
         System.out.println("Отображение сотен, десятков, единиц числа");
