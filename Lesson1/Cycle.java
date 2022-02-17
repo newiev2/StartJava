@@ -3,7 +3,7 @@ class Cycle {
         //Вывод на консоль всех чисел от 0 до 20 с помощью цикла for
         System.out.println("Вывод на консоль всех чисел от 0 до 20 с помощью цикла for");
 
-        for( int i = 0; i <= 20; i++) {
+        for(int i = 0; i <= 20; i++) {
             System.out.println(i);
         }
 
@@ -11,25 +11,24 @@ class Cycle {
         System.out.println("Вывод на консоль всех чисел от 6 до -6 с помощью цикла while (с шагом итерации 2)");
 
         int num = 6;
-
         while(num >= -6) {
             System.out.println(num);
             num -= 2;
         }
 
         //Вывод количества нечетных чисел от 10 до 20 с помощью цикла do while
-        System.out.println("Вывод количества нечетных чисел от 10 до 20 с помощью цикла do while");
+        System.out.println("Вывод суммы нечетных чисел от 10 до 20 с помощью цикла do while");
 
-        int counter = 0;
         int j = 10;
+        int sumOddNums = 0;
 
         do {
             if(j % 2 != 0) {
-                counter++;
+                sumOddNums = sumOddNums + j;
             }
             j++;
         } while(j <= 20);
 
-        System.out.println("Количество нечетных чисел в дипазаоне от 10 до 20 равно " + counter);
+        System.out.println("Сумма нечетных чисел в дипазаоне от 10 до 20 равна " + sumOddNums);
     }
 }

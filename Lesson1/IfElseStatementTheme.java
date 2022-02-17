@@ -176,6 +176,8 @@ public class IfElseStatementTheme {
         if((sideX + sideY > sideZ) || (sideX + sideZ > sideY) || (sideY + sideZ > sideX)) {
             System.out.println("Такой треугольник существует");
 
+            /*
+            Площадь треугольника по трём сторонам и полупериметру
             double halfPerimeter = (sideX + sideY + sideZ) / 2;
             double squareRoot = halfPerimeter * (halfPerimeter - sideX) * (halfPerimeter - sideY) * (halfPerimeter - sideZ);
 
@@ -190,6 +192,12 @@ public class IfElseStatementTheme {
             } while ((tempValue - square) != 0);
             System.out.println("Площадь данного треугольника = " + square);
             System.out.println("Проверяем, что вычисления верны. square * square = " + (square * square));
+            */
+
+            //Площадь прямоугольного треугольника по двум катетам
+            double square = (sideX * sideY) / 2;
+
+            System.out.println("Площадь данного треуольника = " + square);
         } else {
             System.out.println("Такой треугольник не существует");
         }
@@ -201,14 +209,14 @@ public class IfElseStatementTheme {
         int countNom50;
         int countNom10;
         int countNom1;
-        int reverseCalsulation;
+        int reverseCalculation;
 
         countNom50 = totalSum / 50;
         countNom10 = totalSum % 50 / 10;
         countNom1 = totalSum % 10;
         reverseCalculation = countNom50 * 50 + countNom10 * 10 + countNom1 * 1;
 
-        System.out.println("Исходная сумма равна " + reverseCalculation;
+        System.out.println("Исходная сумма равна " + reverseCalculation);
         System.out.println("Количество банкнот номиналом 50 = " + countNom50);
         System.out.println("Количество банкнот номиналом 10 = " + countNom10);
         System.out.println("Количество банкнот номиналом 1 = " + countNom1);
