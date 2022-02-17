@@ -5,7 +5,7 @@ public class Calculator {
 
         int operand1 = 50;
         int operand2 = 1;
-        char operator = '/';
+        char operator = '(';
         double operationResult = 0;
         boolean isExists = true;
 
@@ -37,14 +37,13 @@ public class Calculator {
         } else if(operator == '%') {
             operationResult = operand1 % operand2;
         } else {
-            System.out.println("Такая операция в программе не реализована либо значение оператора не является оператором");
+            isExists = false;
         }
 
         if(isExists) {
             System.out.println("Результат операции " + operand1 + "" + operator + "" + operand2 + " равен " + operationResult);
         } else {
-            System.out.println("На ноль делить нельзя! Результата операции " + operand1 + "" + operator + "" + operand2 + " не существует");
+            System.out.println("Операция " + operand1 + "" + operator + "" + operand2 + " не существует либо вы пытаетесь делить на ноль");
         }
-        
     }
 }
