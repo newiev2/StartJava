@@ -1,4 +1,4 @@
-public class Calculator1 {
+public class Calculator {
     public static void main(String[] args) {
         //Программа-калькулятор. Выполняет операцию, хранящуюся в operator, над целочисленными положительными операндами operand1 и operand2
         System.out.println("Программа-калькулятор. Выполняет операцию, хранящуюся в operator, над целочисленными положительными операндами operand1 и operand2");
