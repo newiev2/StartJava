@@ -13,10 +13,10 @@ public class GuessNumber {
                 tryNum = 0;
             } else if(tryNum > computedNum) {
                 System.out.println("Данное число больше того, что загадал компьютер");
-                tryNum -= 1;
+                tryNum--;
             } else {
                 System.out.println("Данное число меньше того, что загадал компьютер");
-                tryNum += 1;
+                tryNum++;
             }
             System.out.println("Вы загадали новое число: " + tryNum);
         } while(tryNum != computedNum);
