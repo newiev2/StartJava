@@ -16,7 +16,6 @@ public class CalculatorTest {
             System.out.println("Result of the operation: " + calculation.calculate());
             do {
                 System.out.print("Do you want to try again? [yes/no]: ");
-                input.nextLine();
                 answer = input.nextLine();
             } while(!answer.equals("yes") && !answer.equals("no"));
         } while(answer.equals("yes"));
