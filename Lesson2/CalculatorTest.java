@@ -14,6 +14,7 @@ public class CalculatorTest {
             System.out.print("Enter value of the second operand: ");
             calculation.setSecondOperand(input.nextInt());
             System.out.println("Result of the operation: " + calculation.calculate());
+            input.nextLine();
             do {
                 System.out.print("Do you want to try again? [yes/no]: ");
                 answer = input.nextLine();
