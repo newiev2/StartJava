@@ -3,22 +3,13 @@ public class Calculator {
     private int firstOperand;
     private int secondOperand;
     private char operator;
-    private int result;
 
     public void setFirstOperand(int firstOperand) {
         this.firstOperand = firstOperand;
     }
 
-    public int getFirstOperand() {
-        return firstOperand;
-    }
-
     public void setSecondOperand(int secondOperand) {
         this.secondOperand = secondOperand;
-    }
-
-    public int getSecondOperand() {
-        return secondOperand;
     }
 
     public void setOperator(char operator) {
@@ -29,37 +20,30 @@ public class Calculator {
         }
     }
 
-    public char getOperator() {
-        return operator;
-    }
-
     public int calculate() {
+        int result = 0;
         switch(operator) {
             case '+':
-                result = firstOperand + secondOperand;
-                break;
+                return firstOperand + secondOperand;
             case '-':
-                result = firstOperand - secondOperand;
-                break;
+                return firstOperand - secondOperand;
             case '*':
-                result = firstOperand * secondOperand;
-                break;
+                return firstOperand * secondOperand;
             case '/':
                 if(secondOperand == 0) {
                     System.out.println("Dividing to zero is prohibited");
+                    break;
                 } else {
-                    result = firstOperand / secondOperand;
+                    return firstOperand / secondOperand;
                 }
-                break;
             case '^':
                 result = 1;
                 for(int i = 0; i < secondOperand; i++) {
                     result *= firstOperand;
                 }
-                break;
+                return result;
             case '%':
-                result = firstOperand % secondOperand;
-                break;
+                return firstOperand % secondOperand;
         }
         return result;
     }
