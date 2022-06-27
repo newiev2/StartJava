@@ -21,7 +21,6 @@ public class Calculator {
     }
 
     public int calculate() {
-        int result = 0;
         switch(operator) {
             case '+':
                 return firstOperand + secondOperand;
@@ -37,7 +36,7 @@ public class Calculator {
                     return firstOperand / secondOperand;
                 }
             case '^':
-                result = 1;
+                int result = 1;
                 for(int i = 0; i < secondOperand; i++) {
                     result *= firstOperand;
                 }
@@ -45,6 +44,6 @@ public class Calculator {
             case '%':
                 return firstOperand % secondOperand;
         }
-        return result;
+        return 0;
     }
 }
