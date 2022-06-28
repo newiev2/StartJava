@@ -11,8 +11,11 @@ public class Jaeger {
     private int strength;
     private int armor;
 
-    public Jaeger(String modelName, String createdAt, String mark, String status, String origin, int height, int weight, int speed
-    ,int strength, int armor) {
+    public Jaeger() {
+    }
+
+    public Jaeger(String modelName, String createdAt, String mark, String status, String origin,
+    int height, int weight, int speed,int strength, int armor) {
         this.modelName = modelName;
         this.createdAt = createdAt;
         this.mark = mark;
@@ -23,9 +26,6 @@ public class Jaeger {
         this.speed = speed;
         this.strength = strength;
         this.armor = armor;
-    }
-
-    public Jaeger() {
     }
 
     public void setModelName(String modelName) {
