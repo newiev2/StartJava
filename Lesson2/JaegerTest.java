@@ -14,7 +14,7 @@ public class JaegerTest {
         System.out.println("Strength: " + chernoAlpha.getStrength());
         System.out.println("Armor: " + chernoAlpha.getArmor());
 
-        Jaeger coyoteTango = new Jaeger(null, null, null, null, null, 0, 0, 0, 0, 0);
+        Jaeger coyoteTango = new Jaeger();
         coyoteTango.setModelName("Coyote Tango");
         coyoteTango.setCreatedAt("2015");
         coyoteTango.setMark("Mark-1");

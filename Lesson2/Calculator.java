@@ -32,9 +32,8 @@ public class Calculator {
                 if(secondOperand == 0) {
                     System.out.println("Dividing to zero is prohibited");
                     break;
-                } else {
-                    return firstOperand / secondOperand;
                 }
+                return firstOperand / secondOperand;
             case '^':
                 int result = 1;
                 for(int i = 0; i < secondOperand; i++) {
