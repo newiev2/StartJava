@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.base;
+
 public class UnicodeCycle {
     public static void main(String[] args) {
         //Данная программа выводит символы Юникода в определенном диапазоне [33, 126]
