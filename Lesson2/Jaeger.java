@@ -15,7 +15,7 @@ public class Jaeger {
     }
 
     public Jaeger(String modelName, String createdAt, String mark, String status, String origin,
-    int height, int weight, int speed,int strength, int armor) {
+            int height, int weight, int speed,int strength, int armor) {
         this.modelName = modelName;
         this.createdAt = createdAt;
         this.mark = mark;
