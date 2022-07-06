@@ -1,4 +1,4 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         Scanner input = new Scanner(System.in);
-        String answer = "";
+        String answer;
         do {
             System.out.print("Enter value of the first operand: ");
             calc.setFirstOperand(input.nextInt());
