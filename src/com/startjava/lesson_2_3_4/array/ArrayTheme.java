@@ -2,29 +2,11 @@ package com.startjava.lesson_2_3_4.array;
 
 public class ArrayTheme {
 
-    public static void printInts(int[] intArr) {
-        System.out.print("Array values: ");
-        for(int num : intArr) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
-    }
-
-    public static void printFloats(float[] floatArr) {
-        System.out.print("Array values: ");
-        for(float floatNum : floatArr) {
-            System.out.print(floatNum + " ");
-        }
-        System.out.println();
-    }
-
     public static void main(String[] args) {
-        int len;
-
         System.out.println("1. Реверс значений массива");
 
         int[] intArr = {1, 2, 3, 4, 5, 6, 7};
-        len = intArr.length;
+        int len = intArr.length;
 
         //Source array output
         printInts(intArr);
@@ -38,29 +20,30 @@ public class ArrayTheme {
 
         //Reversed array output
         printInts(intArr);
+        System.out.println();
 
         System.out.println("2. Вывод произведения элементов массива");
 
-        int[] intArr1 = new int[10];
-        len = intArr1.length;
+        intArr = new int[10];
+        len = intArr.length;
 
         //Filling an array with values
         for(int i = 0; i < len; i++) {
-            intArr1[i] = i;
+            intArr[i] = i;
         }
 
         //Array output
-        printInts(intArr1);
+        printInts(intArr);
 
         //Array values multiplying
         int mult = 1;
-        for(int i = 1; i < len - 1; i++) {
-            mult *= intArr1[i];
+        for(int i = 2; i < len - 1; i++) {
+            mult *= intArr[i];
         }
 
         //Printing results
         System.out.println("Result of multiplying array values = " + mult);
-        System.out.println(intArr1[0] + " has index " + 0 + "\n" + intArr1[9] + " has index " + 9 + "\n");
+        System.out.println(intArr[0] + " has index " + 0 + "\n" + intArr[9] + " has index " + 9 + "\n");
 
         System.out.println("3. Удаление элементов массива");
 
@@ -86,7 +69,7 @@ public class ArrayTheme {
 
         //Rewritten array output + counter value
         printFloats(floatArr);
-        System.out.println("\nRewritten values: " + counter + "\n");
+        System.out.println("Rewritten values: " + counter + "\n");
 
         System.out.println("4. Вывод элементов массива лесенкой в обратном порядке");
 
@@ -96,8 +79,7 @@ public class ArrayTheme {
         //Filling array with A...Z
         char sign = 65;
         for(int i = 0; i < len; i++) {
-            letters[i] = sign;
-            sign++;
+            letters[i] = sign++;
         }
 
         //Array output
@@ -109,43 +91,41 @@ public class ArrayTheme {
 
         //Output of reversed array in ladder format
         System.out.println("Output of reversed array letters in ladder format");
-        String concat = "";
+        String line = "";
         for(int i = len - 1; i >= 0; i--) {
-            concat += letters[i];
-            System.out.println(concat);
+            System.out.println(line += letters[i]);
         }
         System.out.println();
 
         System.out.println("5. Генерация уникальных чисел");
 
-        int[] randomNumbers = new int[30];
-        len = randomNumbers.length;
+        intArr = new int[30];
+        len = intArr.length;
 
         //Filling array with unique random numbers
         for(int i = 0; i < len; i++) {
             int candidateNumber = (int) (Math.random() * (40 + 1)) + 60;
             int j = 0;
             do {
-                if(candidateNumber != randomNumbers[j]) {
-                    randomNumbers[i] = candidateNumber;
-                } else {
+                if(candidateNumber == intArr[j]) {
                     i--;
                     break;
                 }
+                intArr[i] = candidateNumber;
                 j++;
             } while(j < i);
         }
 
         //Array output
-        printInts(randomNumbers);
+        printInts(intArr);
 
         //Sorting array
         for(int i = len - 1; i > 0; i--) {
             for(int j = 0; j < i; j++) {
-                if(randomNumbers[j] < randomNumbers[j + 1]) {
-                    int tempNumber = randomNumbers[j];
-                    randomNumbers[j] = randomNumbers[j + 1];
-                    randomNumbers[j + 1] = tempNumber;
+                if(intArr[j] < intArr[j + 1]) {
+                    int tempNumber = intArr[j];
+                    intArr[j] = intArr[j + 1];
+                    intArr[j + 1] = tempNumber;
                 }
             }
         }
@@ -153,9 +133,25 @@ public class ArrayTheme {
         //Sorted array output 10 values per line
         for(int i = 0; i < len; i++) {
             if(i % 10 == 0) {
-                System.out.print("\n");
+                System.out.println();
             }
-            System.out.print(randomNumbers[i] + " ");
+            System.out.print(intArr[i] + " ");
         }
+    }
+
+    private static void printInts(int[] intArr) {
+        System.out.print("Array values: ");
+        for(int num : intArr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    private static void printFloats(float[] floatArr) {
+        System.out.print("Array values: ");
+        for(float num : floatArr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 }
