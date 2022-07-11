@@ -6,11 +6,11 @@ public class ArrayTheme {
         System.out.println("1. Реверс значений массива");
 
         int[] intArr = {1, 2, 3, 4, 5, 6, 7};
-        int len = intArr.length;
 
         //Source array output
         printInts(intArr);
 
+        int len = intArr.length;
         //Array reversing
         for (int i = 0; i < len / 2; i++) {
             int temp = intArr[len - i - 1];
@@ -20,9 +20,8 @@ public class ArrayTheme {
 
         //Reversed array output
         printInts(intArr);
-        System.out.println();
 
-        System.out.println("2. Вывод произведения элементов массива");
+        System.out.println("\n2. Вывод произведения элементов массива");
 
         intArr = new int[10];
         len = intArr.length;
@@ -42,10 +41,10 @@ public class ArrayTheme {
         }
 
         //Printing results
-        System.out.println("Result of multiplying array values = " + mult);
-        System.out.println(intArr[0] + " has index " + 0 + "\n" + intArr[9] + " has index " + 9 + "\n");
+        System.out.println("1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 = " + mult);
+        System.out.println(intArr[0] + " has index " + 0 + "\n" + intArr[9] + " has index " + 9);
 
-        System.out.println("3. Удаление элементов массива");
+        System.out.println("\n3. Удаление элементов массива");
 
         float[] floatArr = new float[15];
         len = floatArr.length;
@@ -69,9 +68,9 @@ public class ArrayTheme {
 
         //Rewritten array output + counter value
         printFloats(floatArr);
-        System.out.println("Rewritten values: " + counter + "\n");
+        System.out.println("Rewritten values: " + counter);
 
-        System.out.println("4. Вывод элементов массива лесенкой в обратном порядке");
+        System.out.println("\n4. Вывод элементов массива лесенкой в обратном порядке");
 
         char[] letters = new char[26];
         len = letters.length;
@@ -82,22 +81,14 @@ public class ArrayTheme {
             letters[i] = sign++;
         }
 
-        //Array output
-        System.out.print("Array letters values: ");
-        for(char letter : letters) {
-            System.out.print(letter + " ");
-        }
-        System.out.println();
-
         //Output of reversed array in ladder format
         System.out.println("Output of reversed array letters in ladder format");
         String line = "";
         for(int i = len - 1; i >= 0; i--) {
             System.out.println(line += letters[i]);
         }
-        System.out.println();
 
-        System.out.println("5. Генерация уникальных чисел");
+        System.out.println("\n5. Генерация уникальных чисел");
 
         intArr = new int[30];
         len = intArr.length;
@@ -118,13 +109,10 @@ public class ArrayTheme {
             }
         }
 
-        //Array output
-        printInts(intArr);
-
         //Sorting array
         for(int i = len - 1; i > 0; i--) {
             for(int j = 0; j < i; j++) {
-                if(intArr[j] < intArr[j + 1]) {
+                if(intArr[j] > intArr[j + 1]) {
                     int tempNumber = intArr[j];
                     intArr[j] = intArr[j + 1];
                     intArr[j + 1] = tempNumber;
@@ -139,12 +127,10 @@ public class ArrayTheme {
             }
             System.out.print(intArr[i] + " ");
         }
-        System.out.println("\n");
 
-        System.out.println("6. Сдвиг элементов массива");
+        System.out.println("\n\n6. Сдвиг элементов массива");
 
-        String[] stringArr = new String[]{"", "AA", "", "", "BBB", "C", "", "DDDD"};
-        len = stringArr.length;
+        String[] stringArr = {"", "AA", "", "", "BBB", "C", "", "DDDD"};
 
         //Array output
         printStrings(stringArr);
@@ -162,12 +148,13 @@ public class ArrayTheme {
         int destIndex = 0;
         int srcIndex = 0;
 
+        len = stringArr.length;
         //Copying only not blank strings from source array to new array
         for(int i = 0; i < len; i++) {
             if(!stringArr[i].isBlank()) {
                 srcIndex = i;
-                if(i < stringArr.length - 1) {
-                    for(int j = i + 1; j < stringArr.length; j++) {
+                if(i < len - 1) {
+                    for(int j = i + 1; j < len; j++) {
                         if(stringArr[j].isBlank()) {
                             break;
                         }

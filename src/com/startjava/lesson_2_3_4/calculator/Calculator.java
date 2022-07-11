@@ -2,49 +2,29 @@ package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
 
-    private int firstOperand;
-    private int secondOperand;
-    private char operator;
+    private static int firstOperand;
+    private static int secondOperand;
+    private static char operator;
 
-    public void setFirstOperand(int firstOperand) {
-        this.firstOperand = firstOperand;
+    public static void parseExpressionToParams(String mathExpression) {
+        String[] expressionParams = mathExpression.split(" ");
+        firstOperand = Integer.parseInt(expressionParams[0]);
+        operator = expressionParams[1].charAt(0);
+        secondOperand = Integer.parseInt(expressionParams[2]);
     }
 
-    public void setSecondOperand(int secondOperand) {
-        this.secondOperand = secondOperand;
-    }
-
-    public void setOperator(char operator) {
-        if(operator == '+' || operator == '-' || operator == '*' || operator == '/' || operator == '^' || operator == '%') {
-            this.operator = operator;
-        } else {
-            System.out.println("Math operation is incorrect");
-        }
-    }
-
-    public int calculate() {
-        switch(operator) {
-            case '+':
-                return firstOperand + secondOperand;
-            case '-':
-                return firstOperand - secondOperand;
-            case '*':
-                return firstOperand * secondOperand;
-            case '/':
-                if(secondOperand == 0) {
-                    System.out.println("Dividing to zero is prohibited");
-                    break;
-                }
-                return firstOperand / secondOperand;
-            case '^':
-                int result = 1;
-                for(int i = 0; i < secondOperand; i++) {
-                    result *= firstOperand;
-                }
-                return result;
-            case '%':
-                return firstOperand % secondOperand;
-        }
-        return 0;
+    public static int calculate() {
+        return switch(operator) {
+            case '+' -> Math.addExact(firstOperand, secondOperand);
+            case '-' -> Math.subtractExact(firstOperand, secondOperand);
+            case '*' -> Math.multiplyExact(firstOperand, secondOperand);
+            case '/' -> Math.floorDiv(firstOperand, secondOperand);
+            case '^' -> (int) Math.pow(firstOperand, secondOperand);
+            case '%' -> Math.floorMod(firstOperand, secondOperand);
+            default -> {
+                System.out.println("Incorrect math operation");
+                yield 0;
+            }
+        };
     }
 }

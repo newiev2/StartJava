@@ -5,18 +5,24 @@ import java.util.Scanner;
 public class CalculatorTest {
 
     public static void main(String[] args) {
-        Calculator calc = new Calculator();
         Scanner input = new Scanner(System.in);
         String answer;
         do {
-            System.out.print("Enter value of the first operand: ");
-            calc.setFirstOperand(input.nextInt());
-            System.out.print("Enter math operation: ");
-            calc.setOperator(input.next().charAt(0));
-            System.out.print("Enter value of the second operand: ");
-            calc.setSecondOperand(input.nextInt());
-            System.out.println("Result of the operation: " + calc.calculate());
-            input.nextLine();
+            //Entering math expression
+            System.out.print("Enter math expression: ");
+            String mathExpression = input.nextLine();
+            try {
+                //Parsing string expression to parameters
+                Calculator.parseExpressionToParams(mathExpression);
+
+                //Printing calculation result
+                System.out.println("Expression result = " + Calculator.calculate());
+            } catch(NumberFormatException e) {
+                System.out.println("Operand should be integer number. Enter correct value");
+            } catch(ArithmeticException e1) {
+                System.out.println("Dividing to zero is prohibited");
+            }
+
             do {
                 System.out.print("Do you want to try again? [yes/no]: ");
                 answer = input.nextLine();
