@@ -6,11 +6,15 @@ public class Calculator {
     private static int secondOperand;
     private static char operator;
 
-    public static void parseExpressionToParams(String mathExpression) {
+    public static void parseExpressionToParams (String mathExpression) throws IllegalArgumentException {
         String[] expressionParams = mathExpression.split(" ");
-        firstOperand = Integer.parseInt(expressionParams[0]);
-        operator = expressionParams[1].charAt(0);
-        secondOperand = Integer.parseInt(expressionParams[2]);
+            if(Integer.parseInt(expressionParams[0]) >= 0 && Integer.parseInt(expressionParams[2]) >= 0) {
+                firstOperand = Integer.parseInt(expressionParams[0]);
+                secondOperand = Integer.parseInt(expressionParams[2]);
+                operator = expressionParams[1].charAt(0);
+            } else {
+                throw new IllegalArgumentException("Operand should be a positive number");
+            }
     }
 
     public static int calculate() {
