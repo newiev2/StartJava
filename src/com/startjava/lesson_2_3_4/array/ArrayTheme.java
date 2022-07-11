@@ -101,19 +101,28 @@ public class ArrayTheme {
 
         intArr = new int[30];
         len = intArr.length;
+        int candidateNumber;
 
         //Filling array with unique random numbers
+        //for(int i = 0; i < len; i++) {
+        //    do {
+        //        candidateNumber = (int) (Math.random() * (40 + 1)) + 60;
+        //    } while(hasNumber(candidateNumber, intArr));
+        //    intArr[i] = candidateNumber;
+        //}
+
         for(int i = 0; i < len; i++) {
-            int candidateNumber = (int) (Math.random() * (40 + 1)) + 60;
-            int j = 0;
-            do {
-                if(candidateNumber == intArr[j]) {
+            candidateNumber = (int) (Math.random() * (40 + 1)) + 60;
+            for(int number : intArr) {
+                if(number == candidateNumber) {
+                    candidateNumber = -1;
                     i--;
                     break;
                 }
+            }
+            if(candidateNumber != -1) {
                 intArr[i] = candidateNumber;
-                j++;
-            } while(j < i);
+            }
         }
 
         //Array output
@@ -137,6 +146,50 @@ public class ArrayTheme {
             }
             System.out.print(intArr[i] + " ");
         }
+        System.out.println("\n");
+
+        System.out.println("6. Сдвиг элементов массива");
+
+        String[] stringArr = new String[]{"", "AA", "", "", "BBB", "C", "", "DDDD"};
+        len = stringArr.length;
+
+        //Array output
+        printStrings(stringArr);
+
+        //Calculating length for new array
+        int newLen = 0;
+        for(String string : stringArr) {
+            if(!string.isBlank()) {
+                newLen++;
+            }
+        }
+
+        String[] newStringArr = new String[newLen];
+        counter = 1;
+        int destIndex = 0;
+        int srcIndex = 0;
+
+        //Copying only not blank strings from source array to new array
+        for(int i = 0; i < len; i++) {
+            if(!stringArr[i].isBlank()) {
+                srcIndex = i;
+                if(i < stringArr.length - 1) {
+                    for(int j = i + 1; j < stringArr.length; j++) {
+                        if(stringArr[j].isBlank()) {
+                            break;
+                        }
+                        counter++;
+                    }
+                }
+                System.arraycopy(stringArr, srcIndex, newStringArr, destIndex, counter);
+                destIndex += counter;
+                i += counter;
+                counter = 1;
+            }
+        }
+
+        //New array output
+        printStrings(newStringArr);
     }
 
     private static void printInts(int[] intArr) {
@@ -151,6 +204,14 @@ public class ArrayTheme {
         System.out.print("Array values: ");
         for(float num : floatArr) {
             System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    private static void printStrings(String[] stringArr) {
+        System.out.print("Array values: ");
+        for(String string : stringArr) {
+            System.out.print(string + " ");
         }
         System.out.println();
     }
