@@ -104,13 +104,6 @@ public class ArrayTheme {
         int candidateNumber;
 
         //Filling array with unique random numbers
-        //for(int i = 0; i < len; i++) {
-        //    do {
-        //        candidateNumber = (int) (Math.random() * (40 + 1)) + 60;
-        //    } while(hasNumber(candidateNumber, intArr));
-        //    intArr[i] = candidateNumber;
-        //}
-
         for(int i = 0; i < len; i++) {
             candidateNumber = (int) (Math.random() * (40 + 1)) + 60;
             for(int number : intArr) {
