@@ -41,7 +41,8 @@ public class ArrayTheme {
         }
 
         //Printing results
-        System.out.println("1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 = " + mult);
+        System.out.println(intArr[1] + " * " + intArr[2] + " * " + intArr[3] + " * " + intArr[4] + " * " + intArr[5]
+                + " * " + intArr[6] + " * " + intArr[7] + " * " + intArr[8] + " = " + mult);
         System.out.println(intArr[0] + " has index " + 0 + "\n" + intArr[9] + " has index " + 9);
 
         System.out.println("\n3. Удаление элементов массива");
@@ -58,17 +59,17 @@ public class ArrayTheme {
         printFloats(floatArr);
 
         //Rewriting values that above value in the middle of array
-        int counter = 0;
+        int count = 0;
         for(int i = 0; i < len; i++) {
             if(floatArr[i] > floatArr[len / 2]) {
                 floatArr[i] = 0;
-                counter++;
+                count++;
             }
         }
 
-        //Rewritten array output + counter value
+        //Rewritten array output + count value
         printFloats(floatArr);
-        System.out.println("Rewritten values: " + counter);
+        System.out.println("Rewritten values: " + count);
 
         System.out.println("\n4. Вывод элементов массива лесенкой в обратном порядке");
 
@@ -144,7 +145,7 @@ public class ArrayTheme {
         }
 
         String[] newStringArr = new String[newLen];
-        counter = 1;
+        count = 1;
         int destIndex = 0;
         int srcIndex = 0;
 
@@ -158,13 +159,13 @@ public class ArrayTheme {
                         if(stringArr[j].isBlank()) {
                             break;
                         }
-                        counter++;
+                        count++;
                     }
                 }
-                System.arraycopy(stringArr, srcIndex, newStringArr, destIndex, counter);
-                destIndex += counter;
-                i += counter;
-                counter = 1;
+                System.arraycopy(stringArr, srcIndex, newStringArr, destIndex, count);
+                destIndex += count;
+                i += count;
+                count = 1;
             }
         }
 
