@@ -12,17 +12,12 @@ public class CalculatorTest {
             System.out.print("Enter math expression: ");
             String mathExpression = input.nextLine();
             try {
-                //Parsing string expression to parameters
-                Calculator.parseExpressionToParams(mathExpression);
-
                 //Printing calculation result
-                System.out.println("Expression result = " + Calculator.calculate());
+                System.out.println("Expression result = " + Calculator.calculate(mathExpression));
             } catch(NumberFormatException e) {
                 System.out.println("Operand should be an integer number. Enter correct value");
             } catch(ArithmeticException e1) {
                 System.out.println("Dividing to zero is prohibited");
-            } catch (IllegalArgumentException e2) {
-                System.out.println(e2.getMessage());
             }
 
             do {
