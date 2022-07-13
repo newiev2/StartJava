@@ -1,24 +1,19 @@
 package com.startjava.lesson_2_3_4.guess;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class GuessNumberTest {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("First player, enter your name:");
-        Player firstPlayer = new Player(scan.nextLine());
-        System.out.println("Second player, enter your name:");
-        Player secondPlayer = new Player(scan.nextLine());
-        GuessNumber game = new GuessNumber(firstPlayer, secondPlayer);
+        Scanner input = new Scanner(System.in);
+        GuessNumber game = new GuessNumber(input);
 
         String answer;
         do {
-            game.start();
+            game.launch();
             do {
-                System.out.print("Do you want to try again? [yes/no]: ");
-                answer = scan.nextLine();
+                System.out.print("\nDo you want to try again? [yes/no]: ");
+                answer = input.nextLine();
             } while(!answer.equals("yes") && !answer.equals("no"));
         } while(answer.equals("yes"));
     }
