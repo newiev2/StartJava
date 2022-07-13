@@ -16,8 +16,10 @@ public class CalculatorTest {
                 System.out.println("Expression result = " + Calculator.calculate(mathExpression));
             } catch(NumberFormatException e) {
                 System.out.println("Operand should be an integer number. Enter correct value");
-            } catch(ArithmeticException e1) {
+            } catch(ArithmeticException e) {
                 System.out.println("Dividing to zero is prohibited");
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
             }
 
             do {
