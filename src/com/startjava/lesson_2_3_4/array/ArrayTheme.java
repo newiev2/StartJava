@@ -41,8 +41,13 @@ public class ArrayTheme {
         }
 
         //Printing results
-        System.out.println(intArr[1] + " * " + intArr[2] + " * " + intArr[3] + " * " + intArr[4] + " * " + intArr[5]
-                + " * " + intArr[6] + " * " + intArr[7] + " * " + intArr[8] + " = " + mult);
+        for(int i = 1; i < len - 1; i++) {
+            if(i == len - 2) {
+                System.out.print(intArr[i] + " = " + mult);
+            } else {
+                System.out.print(intArr[i] + " * ");
+            }
+        }
         System.out.println(intArr[0] + " has index " + 0 + "\n" + intArr[9] + " has index " + 9);
 
         System.out.println("\n3. Удаление элементов массива");
