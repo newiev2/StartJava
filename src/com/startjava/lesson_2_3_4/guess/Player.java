@@ -18,7 +18,7 @@ public class Player {
     }
 
     public int[] getNumbers() {
-        return Arrays.copyOfRange(this.numbers, 0, attempt);
+        return Arrays.copyOf(numbers, attempt);
     }
 
     public int getNumber() {
@@ -46,7 +46,7 @@ public class Player {
         this.score = score;
     }
 
-    public void reset() {
+    public void clear() {
         Arrays.fill(numbers, 0, attempt, 0);
         attempt = 0;
     }
