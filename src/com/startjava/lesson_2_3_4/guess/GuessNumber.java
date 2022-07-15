@@ -28,7 +28,6 @@ public class GuessNumber {
     private void startRound(Scanner input) {
         castLots();
         hiddenNumber = (int) (Math.random() * 100) + 1;
-        System.out.println(hiddenNumber);
         while(hasAttempts(players[players.length - 1])) {
             boolean isOut = false;
             for(Player player : players) {
