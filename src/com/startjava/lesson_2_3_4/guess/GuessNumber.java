@@ -58,10 +58,11 @@ public class GuessNumber {
     }
 
     private boolean isGuessed(Scanner input, Player player) {
-        System.out.println(player.getName() + " your turn. Enter number:");
+        String name = player.getName();
+        System.out.println(name + " your turn. Enter number:");
         player.setNumber(input.nextInt());
         if(player.getNumber() == hiddenNumber) {
-            System.out.println("Player " + player.getName() + " have guessed secret number " + hiddenNumber
+            System.out.println("Player " + name + " have guessed secret number " + hiddenNumber
                     + " with " + player.getAttempt() + " attempt");
             player.setScore(player.getScore() + 1);
             return true;
@@ -69,7 +70,7 @@ public class GuessNumber {
         System.out.println("Number is" + ((player.getNumber() > hiddenNumber) ? " greater " : " less ")
                 + "than hidden number");
         if(!hasAttempts(player)) {
-            System.out.println(player.getName() + " has used all 10 attempts");
+            System.out.println(name + " has used all 10 attempts");
         }
         return false;
     }
