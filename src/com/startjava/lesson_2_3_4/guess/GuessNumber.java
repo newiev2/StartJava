@@ -16,10 +16,10 @@ public class GuessNumber {
     public void launch() {
         System.out.println("Game has been started. Each player has 10 attempts. Good luck!");
         Scanner input = new Scanner(System.in);
-        int count = 0;
-        while(count != players.length) {
-            count++;
-            System.out.println("\nCurrent round: " + count);
+        int round = 0;
+        while(round < players.length) {
+            round++;
+            System.out.println("\nCurrent round: " + round);
             startRound(input);
         }
         printResults();
@@ -45,8 +45,8 @@ public class GuessNumber {
     }
 
     private void castLots() {
-        for(int i = 0; i < players.length - 1; i++) {
-            int rnd = (int) (Math.random() * 3);
+        for(int i = players.length - 1; i > 0; i--) {
+            int rnd = (int) (Math.random() * (i + 1));
             Player temp = players[i];
             players[i] = players[rnd];
             players[rnd] = temp;
@@ -100,11 +100,7 @@ public class GuessNumber {
                     isWinner = false;
                 }
             }
-            if(isWinner) {
-                System.out.println("\n" + players[i].getName() + " has won!");
-            } else {
-                System.out.println("\n" + players[i].getName() + " has lost!");
-            }
+            System.out.println("\n" + players[i].getName() + " has " + (isWinner ? "won!" : "lost!"));
         }
 
         //Checking draw
